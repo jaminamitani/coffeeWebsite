@@ -1,0 +1,39 @@
+/*
+  Coffee Website Source Code
+  - This is a basic structure for the coffee website.
+  - Make sure to install dependencies before running.
+*/
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import CoffeeList from "./pages/CoffeeList";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/coffee" element={<CoffeeList />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+}
+
+export default App;
+
+/*
+  Setup Instructions:
+  1. Clone the repository: `git clone https://github.com/jaminamitani/coffeeWebsite.git`
+  2. Navigate to the project: `cd coffeeWebsite`
+  3. Install dependencies: `npm install`
+  4. Start the development server: `npm start`
+*/
